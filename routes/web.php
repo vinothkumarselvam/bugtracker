@@ -11,20 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-
-Route::get('home', function () {
-    return view('pages.home');
-});
-
-Route::get('bug', function () {
-    return view('pages.bugs');
-});
-
-
-Route::get('status', function () {
-    return view('pages.status');
-});
+Route::get('/', 'PageController@home');
+Route::get('home', 'PageController@home');
+Route::get('bug','PageController@bugs');
+Route::get('status','PageController@status');
